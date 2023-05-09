@@ -9,7 +9,7 @@ function search()
     // form.target = '_blank';
 
     for (let i = 1; i <= 20; i++) {
-    text = "clima en mayo " + i;
+    text = "clima" + i;
     form.innerHTML = '<input name="q" value=' + text + '>';
     
     // el formulario debe estar en el document para poder enviarlo
