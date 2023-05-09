@@ -8,7 +8,7 @@ function search()
     form.method = 'GET';
     // form.target = '_blank';
 
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 30; i++) {
     text = "clima" + i;
     form.innerHTML = '<input name="q" value=' + text + '>';
     
