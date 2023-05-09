@@ -7,7 +7,7 @@ function main()
 {
     searchList.innerHTML = "<H1>Start Search Historial</H1>";
     baseInputText = searchInput.value;
-    time = 1000;
+    time = 2000;
     timer = setInterval(search,time);
 }
 
@@ -26,7 +26,7 @@ function search()
         if (searchWindow) {
           searchWindow.close();
         }
-      }, 800);
+      }, 1000);
     if (i>=20) {
         clearInterval(timer);
         i=0;
