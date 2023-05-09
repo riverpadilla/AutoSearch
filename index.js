@@ -1,20 +1,34 @@
 let searchForm = document.getElementById('searchForm');
 let searchInput = document.getElementById('search-input');
-let inputText = "";
-let i=0;
+let searchList = document.getElementById('searchList');
+let i=0; 
 
 function main()
 {
-    inputText = searchInput.getAttribute("value");
+    searchList.innerHTML = "<H1>Start Search Historial</H1>";
+    baseInputText = searchInput.value;
     time = 1000;
-    timer = setInterval(search,1000);
+    timer = setInterval(search,time);
 }
 
 function search()
 {
     i++;
-    searchText = inputText + " "+ i;
-    searchInput.setAttribute("value", searchText);
-    searchForm.submit();
-    if (i>=5) clearInterval(timer);
+    item = document.createElement('p')
+    inputText = baseInputText + " " + i;
+    searchText = 'https://www.bing.com/search?q=' + inputText;
+    item.innerText = searchText;
+    searchInput.setAttribute("value", inputText);
+    searchList.appendChild(item);
+    searchWindow = window.open(searchText, '_blank');
+        
+        setTimeout(function() {
+        if (searchWindow) {
+          searchWindow.close();
+        }
+      }, 800);
+    if (i>=20) {
+        clearInterval(timer);
+        i=0;
+    }
 }
