@@ -12,21 +12,20 @@
 
         
         <div class="container">
-            <!-- <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="GENERATE SEARCH FOR BING SEARCH" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="search()" >Generate Search</button>
-            </div> -->
-            <form name="searchForm" id="searchForm" action="https://www.bing.com/results.asp" method="get" target="_blank">
-                <label for="search-input" class="form-label">Search Home Page</label>
+            <form name="searchForm" id="searchForm">
+                <label for="search-input" class="form-label"></label>
+                <h1 class="p-3">Rivernet Search Page</h1>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3">Text to Search on Bing.com</span>
                     <input type="text" class="form-control" id="search-input" name="q" aria-describedby="basic-addon3">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="search()">Search</button>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="main()">Search</button>
                 </div>
             </form>
+            <div id = "searchList" class="row">
+            </div>
         </div>
     </center>
-    <script src="main.js"></script>
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
