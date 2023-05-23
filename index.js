@@ -1,13 +1,21 @@
 let searchForm = document.getElementById('searchForm');
 let searchInput = document.getElementById('search-input');
+let searchRepeater = document.getElementById('search-repeater');
 let searchList = document.getElementById('searchList');
 let i=0; 
+let repetitions;
 
 function main()
 {
     searchList.innerHTML = "<H1>Start Search Historial</H1>";
     baseInputText = searchInput.value;
+    if(searchRepeater.value == "") 
+    {
+      searchRepeater.setAttribute("value", 10);
+    }
+    repetitions = searchRepeater.value;
     time = 2000;
+
     timer = setInterval(search,time);
 }
 
@@ -27,7 +35,7 @@ function search()
           searchWindow.close();
         }
       }, 1000);
-    if (i>=20) {
+    if (i>=repetitions) {
         clearInterval(timer);
         i=0;
     }
